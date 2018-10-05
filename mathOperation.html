@@ -1,0 +1,47 @@
+<script>
+    var z;
+    
+    function addition(x, y) {
+        z = x + y;
+        document.write(z + "<br>");
+        return z;
+    }
+    
+    function multiplication(x, y) {
+        z = x * y;
+        document.write(z + "<br>");
+        return z;
+    }
+    
+    function division(x, y) {
+        z = x / y;
+        document.write(z + "<br>");
+        return z;
+    }
+    
+    function subtraction(x, y) {
+        z = x - y;
+        document.write(z + "<br>");
+        return z;
+    }
+    
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case 'addition':
+                addition(arg1, arg2);
+                break;
+            case 'multiplication':
+                multiplication(arg1, arg2);
+                break;
+            case 'division':
+                division(arg1, arg2);
+                break;
+            case 'subtraction':
+                subtraction(arg1, arg2);
+                break;
+        }
+        return z; //зачем это нужно? 
+    }
+    
+    mathOperation(2, 3, 'subtraction');
+</script>
