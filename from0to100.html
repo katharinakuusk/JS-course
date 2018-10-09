@@ -2,12 +2,21 @@
     var a = 2;
     while(a <= 100) {
         
-        if (a%2 == 0) {
+        if (isSimple(a)) {
             document.write(a++ + " ");
-        } else {
-            a++;
         }
+        a++;
     }
     
+    function isSimple(num) {
+        var i = 2;
+        while (num > i ) {
+            if (num%i == 0) {
+                return false;
+            }
+            i++;
+        } 
+        return true;
+    }
     
 </script>
