@@ -1,0 +1,19 @@
+<script>
+    var i = 0, type;
+    
+    function typification(i) {
+        if (i == 0) {
+           type = "это ноль";
+        } else if (i%2 == 0) {
+            type = "четное число";
+        } else {
+            type = "нечетное число";
+        }
+        
+        return type;
+    }
+    
+    do {
+        document.write(i + " - " + typification(i++) + "<br>");
+    } while (i <= 10);
+</script>

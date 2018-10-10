@@ -1,0 +1,18 @@
+<script>
+    var sum = 0;
+    var basket = [
+        {name: "carrot", price: "5p"},
+        {name: "onion", price: "3p"},
+        {name: "potato", price: "4p"},
+        {name: "tomato", price: "6p"},
+    ];
+    
+    function  countBasketPrice() {
+        for (var i = 0; i < basket.length; i++) {
+            sum += parseInt(basket[i].price);
+        }
+        alert(sum);
+    }
+    
+    countBasketPrice();
+</script>
