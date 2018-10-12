@@ -1,0 +1,24 @@
+<script>
+    var number = parseInt(prompt("Введите число от 0 до 999")), digits = {};
+    if (number > 999) {
+        console.log("Введено некорректное значение");
+    } else {
+        makeDigits(number);
+    }
+    
+    function makeDigits(num) {
+        if (num / 100 >= 1) {
+            digits.hundrets = Math.floor(num / 100);
+            num = num % 100;
+        }
+        
+        if (num / 10 >= 1) {
+            digits.tens = Math.floor(num / 10);
+            num = num % 10;
+        }
+        
+        digits.units = num;
+    }
+    
+    console.log(digits);
+</script>
