@@ -3,21 +3,21 @@
     if (number > 999) {
         console.log("Введено некорректное значение");
     } else {
-        makeDigits(number);
+        makeDigits(number, digits);
     }
     
-    function makeDigits(num) {
+    function makeDigits(num, obj) {
         if (num / 100 >= 1) {
-            digits.hundrets = Math.floor(num / 100);
+            obj.hundrets = Math.floor(num / 100);
             num = num % 100;
         }
         
         if (num / 10 >= 1) {
-            digits.tens = Math.floor(num / 10);
+            obj.tens = Math.floor(num / 10);
             num = num % 10;
         }
         
-        digits.units = num;
+        obj.units = num;
     }
     
     console.log(digits);
