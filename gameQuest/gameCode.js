@@ -114,7 +114,19 @@ switch (event) {
 }
 alert('Спасибо за игру');
 //------------------------------------------
+do {//Выводим первый вопрос
+    ok = false;
+    event = +prompt('Введите номер хода, -1 - Выход из игры');
+    if (event == -1) {
+        break;
+    }
+    else {
+        ok = isAnswer(reply.length, event);
+    }
+} while (!ok);
 
+var n = --event;
+alert(reply[n]);
 
 //------------------------------------------
 function isAnswer(q, event) {
