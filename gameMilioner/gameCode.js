@@ -21,45 +21,50 @@ if (event == questions[0].correct) {
             ok = isAnswer(event);
         }
     } while (!ok)
-        if (event == questions[1].correct) {    
+    if (event == questions[1].correct) {    
+        do { 
+            ok = false;
+            askQuestion (2);
+            if (event == -1) {
+                break;
+            } else {
+                ok = isAnswer(event);
+            }
+        } while (!ok);
+       if (event == questions[2].correct) {    
             do { 
                 ok = false;
-                askQuestion (2);
+                askQuestion (3);
                 if (event == -1) {
                     break;
                 } else {
                     ok = isAnswer(event);
                 }
-            } while (!ok)
-               if (event == questions[2].correct) {    
-                    do { 
-                        ok = false;
-                        askQuestion (3);
-                        if (event == -1) {
-                            break;
-                        } else {
-                            ok = isAnswer(event);
-                        }
-                    } while (!ok)
-                        if (event == questions[3].correct) {    
-                            do { 
-                                ok = false;
-                                askQuestion (4);
-                                if (event == -1) {
-                                    break;
-                                } else {
-                                    ok = isAnswer(event);
-                                }
-                            } while (!ok)  
-                        } else {
-                           alert("Игра окончена!");
-                       }
-               } else {
+            } while (!ok);
+            if (event == questions[3].correct) {    
+                do { 
+                    ok = false;
+                    askQuestion (4);
+                    if (event == -1) {
+                        break;
+                    } else {
+                        ok = isAnswer(event);
+                    }
+                } while (!ok);
+                if (event == questions[4].correct) {    
+                    alert("Вы выиграли миллион!")
+                } else {
                    alert("Игра окончена!");
-               }
-        } else {
-            alert("Игра окончена!");
-        }
+               }                  
+            } else {
+               alert("Игра окончена!");
+           }
+       } else {
+           alert("Игра окончена!");
+       }
+    } else {
+        alert("Игра окончена!");
+    }
 } else {
     alert("Игра окончена!");
 }
