@@ -8,66 +8,29 @@ do {
     } else {
         ok = isAnswer(event);
     }
-} while (!ok)
+} while (!ok);
 
-
-if (event == questions[0].correct) {    
-    do { 
-        ok = false;
-        askQuestion (1);
-        if (event == -1) {
-            break;
-        } else {
-            ok = isAnswer(event);
-        }
-    } while (!ok)
-    if (event == questions[1].correct) {    
-        do { 
+for (var i = 0; i < 4;) {
+    if (event == questions[i].correct) {
+        do {
             ok = false;
-            askQuestion (2);
+            askQuestion (++i);
             if (event == -1) {
                 break;
             } else {
                 ok = isAnswer(event);
             }
         } while (!ok);
-       if (event == questions[2].correct) {    
-            do { 
-                ok = false;
-                askQuestion (3);
-                if (event == -1) {
-                    break;
-                } else {
-                    ok = isAnswer(event);
-                }
-            } while (!ok);
-            if (event == questions[3].correct) {    
-                do { 
-                    ok = false;
-                    askQuestion (4);
-                    if (event == -1) {
-                        break;
-                    } else {
-                        ok = isAnswer(event);
-                    }
-                } while (!ok);
-                if (event == questions[4].correct) {    
-                    alert("Вы выиграли миллион!")
-                } else {
-                   alert("Игра окончена!");
-               }                  
-            } else {
-               alert("Игра окончена!");
-           }
-       } else {
-           alert("Игра окончена!");
-       }
     } else {
         alert("Игра окончена!");
+        break;
     }
-} else {
-    alert("Игра окончена!");
+    
+    if (i == 4) {
+        alert("Вы стали миллионером!");
+    }
 }
+
 
 
 //--------------------------
