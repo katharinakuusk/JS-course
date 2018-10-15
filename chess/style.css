@@ -5,13 +5,34 @@ body {
 }
 
 table {
-    width: 800px;
+    width: 830px;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+.table__string-letters {
+    
+}
+
+.table__cell-letter {
+    border: 1px solid black;
+    height: 20px;
+}
+
+.table__cell-number {
+    border: 1px solid black;
+    width: 20px;
 }
 
 .cell-black {
     background: black;
+    height: 100px;
+    width: 100px;
 }
 
 .cell-white {
     background: white;
+    height: 100px;
+    width: 100px;
 }
