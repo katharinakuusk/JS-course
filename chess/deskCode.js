@@ -1,6 +1,8 @@
 function my_initiation() {
     var letters = [" ", "A", "B", "C", "D", "E", "F", "G", "H"];
-    var chessmen = ["U+265C", "U+265E", ];
+    var chessmen = [ ["U+265C", "U+265E", "U+265D", "U+265A", "U+265B", "U+265D", "U+265E", "U+265C"],
+                   ["U+2656", "U+2658", "U+2657", "U+2654", "U+2655", "U+2657","U+2658", "U+2656"]
+                   ];
     var table = document.createElement("table");
     document.body.appendChild(table);
     
