@@ -17,51 +17,32 @@ function my_initiation() {
     }
     
     //Создание клеток шахматной доски
-    var number = 8; //отвечает за нумерацию строк
+    var flag = true; 
     
-    for (var string = 0; string < 4; string++) {
+    for (var string = 8; string > 0; string--) {
         var tr = document.createElement("tr");
         table.appendChild(tr);
         
         //нумерация
         var numberCell = document.createElement("td");
         numberCell.setAttribute("class", "table__cell-number");
-        numberCell.innerHTML = number--;
-        tr.appendChild(numberCell);
+        numberCell.innerHTML = string;
+        tr.appendChild(numberCell); 
         
         for (var column = 0; column < 8; column++) {
             var td = document.createElement("td");
-            
-            if (column % 2 === 0) {
-                td.setAttribute("class", "cell-black");
-            } else {
-                td.setAttribute("class", "cell-white");
+            if (column == 0) {
+                flag = !flag;
             }
-            
+        
+            if (flag === true) {
+                    td.setAttribute("class", "cell-black");
+                } else {
+                    td.setAttribute("class", "cell-white");
+                }
+            flag = !flag;
             tr.appendChild(td);
-        }
-        
-        var tr = document.createElement("tr");
-        table.appendChild(tr);
-        
-        //нумерация
-        var numberCell = document.createElement("td");
-        numberCell.setAttribute("class", "table__cell-number");
-        numberCell.innerHTML = number--;
-        tr.appendChild(numberCell);
-        
-        for (var column = 0; column < 8; column++) {
-            var td = document.createElement("td");
-            
-            if (column % 2 === 1) {
-                td.setAttribute("class", "cell-black");
-            } else {
-                td.setAttribute("class", "cell-white");
-            }
-            
-            tr.appendChild(td);
-        }
-        
+        }     
     }
     
     function createChessmen () {
