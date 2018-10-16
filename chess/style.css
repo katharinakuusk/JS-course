@@ -23,16 +23,21 @@ table {
 .table__cell-number {
     border: 1px solid black;
     width: 20px;
+    text-align: center;
 }
 
 .cell-black {
-    background: black;
+    background: grey;
     height: 100px;
     width: 100px;
+    text-align: center;
+    font-size: 50px;
 }
 
 .cell-white {
     background: white;
     height: 100px;
     width: 100px;
+    text-align: center;
+    font-size: 50px;
 }

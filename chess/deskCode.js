@@ -1,7 +1,7 @@
 function my_initiation() {
     var letters = [" ", "A", "B", "C", "D", "E", "F", "G", "H"];
-    var chessmen = [ ["U+265C", "U+265E", "U+265D", "U+265A", "U+265B", "U+265D", "U+265E", "U+265C"],
-                   ["U+2656", "U+2658", "U+2657", "U+2654", "U+2655", "U+2657","U+2658", "U+2656"]
+    var chessmen = [ ["&#9823", "&#9822", "&#9821", "&#9818;", "&#9819;", "&#9821", "&#9822", "&#9823"],
+                   ["&#9814;", "&#9816;", "&#9815;", "&#9812;", "&#9813;", "&#9815;","&#9816;", "&#9814;"]
                    ];
     var table = document.createElement("table");
     document.body.appendChild(table);
@@ -44,6 +44,20 @@ function my_initiation() {
                 }
             flag = !flag;
             tr.appendChild(td);
+            
+            if (string == 8) {
+                td.innerHTML = chessmen[0][column];
+            }
+            if (string == 7) {
+                td.innerHTML = "&#9823;";
+            }
+            
+            if (string == 1) {
+                td.innerHTML = chessmen[1][column];
+            }
+            if (string == 2) {
+                td.innerHTML = "&#9817;";
+            }
         }     
     }
     
