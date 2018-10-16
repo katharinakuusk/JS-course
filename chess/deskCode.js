@@ -1,5 +1,6 @@
 function my_initiation() {
     var letters = [" ", "A", "B", "C", "D", "E", "F", "G", "H"];
+    var chessmen = ["U+265C", "U+265E", ];
     var table = document.createElement("table");
     document.body.appendChild(table);
     
@@ -16,14 +17,16 @@ function my_initiation() {
     }
     
     //Создание клеток шахматной доски
-    var number = 1; //отвечает за нумерацию строк
+    var number = 8; //отвечает за нумерацию строк
     
     for (var string = 0; string < 4; string++) {
         var tr = document.createElement("tr");
         table.appendChild(tr);
+        
+        //нумерация
         var numberCell = document.createElement("td");
         numberCell.setAttribute("class", "table__cell-number");
-        numberCell.innerHTML = number++;
+        numberCell.innerHTML = number--;
         tr.appendChild(numberCell);
         
         for (var column = 0; column < 8; column++) {
@@ -40,9 +43,11 @@ function my_initiation() {
         
         var tr = document.createElement("tr");
         table.appendChild(tr);
+        
+        //нумерация
         var numberCell = document.createElement("td");
         numberCell.setAttribute("class", "table__cell-number");
-        numberCell.innerHTML = number++;
+        numberCell.innerHTML = number--;
         tr.appendChild(numberCell);
         
         for (var column = 0; column < 8; column++) {
@@ -56,6 +61,11 @@ function my_initiation() {
             
             tr.appendChild(td);
         }
+        
+    }
+    
+    function createChessmen () {
+        
     }
 }
 
