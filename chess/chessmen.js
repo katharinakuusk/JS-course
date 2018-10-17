@@ -1,1 +1,0 @@
-var rook = document.createElement("U+265C");

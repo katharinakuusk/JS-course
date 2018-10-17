@@ -11,19 +11,28 @@ table {
     border-collapse: collapse;
 }
 
-.table__string-letters {
+.table__row-letters {
     
 }
 
 .table__cell-letter {
     border: 1px solid black;
     height: 20px;
+    text-align: center;
 }
 
 .table__cell-number {
     border: 1px solid black;
     width: 20px;
     text-align: center;
+}
+
+/*.table__cell-number-rotate {
+    transform: rotate(180deg);
+}*/
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 .cell-black {
