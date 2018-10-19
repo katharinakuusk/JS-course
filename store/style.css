@@ -1,0 +1,26 @@
+/* http://color.romanuke.com/tsvetovaya-palitra-3878/ */
+
+body, html {
+    max-width: 1900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #f4e7da;
+}
+
+.large-picture {
+    height: 600px;
+}
+
+.large-picture img {
+
+}
+
+.small-picture-block {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+}
+
+.small-picture-block img:nth-child(n+2) {
+    margin-left: 5px;
+}
