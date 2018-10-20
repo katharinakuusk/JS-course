@@ -5,6 +5,18 @@ body, html {
     width: 100%;
     margin: 0 auto;
     background: #f4e7da;
+    color: #691d35;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .large-picture {
@@ -26,4 +38,35 @@ body, html {
 
 .small-picture-block img:nth-child(n+2) {
     margin-left: 5px;
+}
+
+/*----Стили для корзины----*/
+
+.basket {
+    width: inherit;
+}
+
+hr {
+    color: #691d35;
+}
+
+.catalog__item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.catalog__item_description {
+    width: 60%;
+    max-width: 500px;
+}
+
+.catalog__item_title {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.catalog__item img {
+    width: 40%;
+    max-width: 150px;
+    margin: 0 30px;
 }

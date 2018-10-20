@@ -3,9 +3,10 @@
 
     for(var i = 0; i < images.length; i++) {
         images[i].addEventListener("click", function(e){changePicture(e)});
+    }   
 }
 
-    function changePicture(eventObj) {
+function changePicture(eventObj) {
         var largeBlock = document.querySelector(".large-picture");
         largeBlock.innerHTML = " ";
         var eventElement = eventObj.target;
@@ -21,6 +22,5 @@
         var largeBlock = document.querySelector(".large-picture");
         largeBlock.innerHTML = "Изображение отсутсвует";
     }  
- }
 
 document.addEventListener("DOMContentLoaded", function(e) {init();});
