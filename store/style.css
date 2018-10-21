@@ -40,7 +40,7 @@ p {
     margin-left: 5px;
 }
 
-/*----Стили для корзины----*/
+/*----Стили для корзины - каталог ----*/
 
 .basket {
     width: inherit;
@@ -69,4 +69,20 @@ hr {
     width: 40%;
     max-width: 150px;
     margin: 0 30px;
+}
+
+/*----Стили для корзины - непосредственно корзина ----*/
+
+.basket__item {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.basket__item_name {
+    width: 40%;
+}
+
+.basket__item_price {
+    width: 60%;
 }

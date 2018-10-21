@@ -1,5 +1,12 @@
+var basketInside = [];
+
 function basketPage() {
-   /* var buttons = document.getElementsByTagName("button"); */
+    var basket = document.querySelector(".basket");
+    basket.innerHTML = basketInside;
+   if (basketInside.length == 0) {
+       basket.innerHTML = "Ваша корзина пуста";
+   }
+    
     for (var i = 0; i < products.length; i++) {
         var catalog = document.querySelector(".catalog");
         var catalogItem = document.createElement("div");
@@ -32,33 +39,31 @@ function basketPage() {
         description.appendChild(productPriceBlock);
         
         var button = document.createElement("button");
-        button.innerHTML("Купить");
-        button.addEventListener("click", function(e){addToBasket(e)});
+        button.innerHTML = "Купить";
+        button.setAttribute('id', 'pic_' + i);
+        button.addEventListener("click", function(e){addToBasket(e)}); 
         description.appendChild(button);
     }
 }
 
-addToBasket(e) {
+function addToBasket(e) {
     var basket = document.querySelector(".basket");
     basket.innerHTML = "";
     var eventItem = e.target;
+    var eventItemId = eventItem.id.split("_");
+    basketInside[basketInside.length] = products[eventItemId[1]].name;
     
-}
-    
-  /*  for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function(e){addToBasket(e)});
+   /* for (i = 0; i < basketInside.length; i++) {
+        var basketItem = document.createElement("div");
+        basketItem.classList.add("basket__item");
+        basketItem.innerHTML = basketInside[i];
+        basket.appendChild(basketItem);
+    */
         
-    }   
-}
+    }
 
-function addToBasket(eventObj) {
-    var basket = document.querySelector(".basket");
-    window.basket = basket;
-    basket.innerHTML = "";
-    var eventItem = eventObj.target;
     
-}
+  
 
-*/
 
 document.addEventListener("DOMContentLoaded", function(e) {basketPage();});
