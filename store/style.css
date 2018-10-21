@@ -74,15 +74,25 @@ hr {
 /*----Стили для корзины - непосредственно корзина ----*/
 
 .basket__item {
-    font-size: 16px;
+    padding: 20px 30px;
     display: flex;
     justify-content: flex-start;
 }
 
-.basket__item_name {
+.basket__item_title {
     width: 40%;
+    font-size: 16px;
 }
 
 .basket__item_price {
     width: 60%;
+    font-size: 16px;
+}
+
+.basket__sum {
+    font-size: 20px;
+    text-align: right;
+    font-style: italic;
+    width: 80%;
+    margin-bottom: 10px;
 }

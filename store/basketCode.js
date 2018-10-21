@@ -47,21 +47,38 @@ function basketPage() {
 }
 
 function addToBasket(e) {
+    var sum = 0;
     var basket = document.querySelector(".basket");
     basket.innerHTML = "";
     var eventItem = e.target;
     var eventItemId = eventItem.id.split("_");
-    basketInside[basketInside.length] = products[eventItemId[1]].name;
+    basketInside[basketInside.length] = {name: products[eventItemId[1]].name,
+                                         price: products[eventItemId[1]].price};
     
-   /* for (i = 0; i < basketInside.length; i++) {
+   for (i = 0; i < basketInside.length; i++) {
         var basketItem = document.createElement("div");
         basketItem.classList.add("basket__item");
-        basketItem.innerHTML = basketInside[i];
         basket.appendChild(basketItem);
-    */
-        
+       
+       var basketItemTitle = document.createElement("h6");
+       basketItemTitle.classList.add("basket__item_title");
+       basketItemTitle.innerHTML = basketInside[i].name;
+       basketItem.appendChild(basketItemTitle);
+       
+       var basketItemPrice = document.createElement("div");
+       basketItemPrice.classList.add("basket__item_price");
+       basketItemPrice.innerHTML = "Цена: " + basketInside[i].price + "руб.";
+       basketItem.appendChild(basketItemPrice);
+       
+       var price = parseInt(basketInside[i].price);
+       sum += price;
     }
-
+    
+    var totalSum = document.createElement("div");
+    totalSum.classList.add("basket__sum");
+    totalSum.innerHTML = "Стоимость: " + sum + "руб.";
+    basket.appendChild(totalSum);
+}
     
   
 
