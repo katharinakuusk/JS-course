@@ -1,0 +1,52 @@
+html,
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+table {
+    width: 830px;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+.table__row-letters {
+    
+}
+
+.table__cell-letter {
+    border: 1px solid black;
+    height: 20px;
+    text-align: center;
+}
+
+.table__cell-number {
+    border: 1px solid black;
+    width: 20px;
+    text-align: center;
+}
+
+/*.table__cell-number-rotate {
+    transform: rotate(180deg);
+}*/
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.cell-black {
+    background: grey;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.cell-white {
+    background: white;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+}
