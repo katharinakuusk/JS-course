@@ -68,7 +68,7 @@ function startGame() {
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
     setTimeout(createFood, 5000);
-    setTimeout(сreateLet, 20000);
+    let_timer = setInterval(сreateLet, 20000);
 }
 
 /**
@@ -125,7 +125,7 @@ function move() {
     // 1) new_unit не часть змейки
     // 2) Змейка не ушла за границу поля
     //console.log(new_unit);
-    if (!isSnakeUnit(new_unit) && new_unit !== undefined) {
+    if (!isSnakeUnit(new_unit) && new_unit !== undefined && !haveLet(new_unit)) {
         // Добавление новой части змейки
         new_unit.setAttribute('class', new_unit.getAttribute('class') + ' snake-unit');
         snake.push(new_unit);
@@ -227,12 +227,12 @@ function сreateLet () {
 }
 
 function haveLet(unit) {
-
+    var check = false;
     var unit_classes = unit.getAttribute('class').split(' ');
 
     // Если препятствие
     if (unit_classes.includes('let-unit')) {
-        finishTheGame()    
+        finishTheGame();    
     }
 }
 
@@ -272,6 +272,7 @@ function changeDirection(e) {
 function finishTheGame() {
     gameIsRunning = false;
     clearInterval(snake_timer);
+    clearInterval(let_timer);
     alert('Вы проиграли! Ваш результат: ' + score.toString());
 }
 
