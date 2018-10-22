@@ -6,6 +6,7 @@ body, html {
     margin: 0 auto;
     background: #f4e7da;
     color: #691d35;
+    position: relative;
 }
 
 h1,
@@ -38,6 +39,22 @@ p {
 
 .small-picture-block img:nth-child(n+2) {
     margin-left: 5px;
+}
+
+.arrow {
+    font-size: 50px;
+}
+
+#arrow-left {
+    position: absolute;
+    top: 260px;
+    left: 30px;
+}
+
+#arrow-right {
+    position: absolute;
+    top: 260px;
+    right: 30px;
 }
 
 /*----Стили для корзины - каталог ----*/
