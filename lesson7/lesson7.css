@@ -36,3 +36,7 @@ td.game-table-cell{
 .score {
     margin-top: 10px;
 }
+
+.let-unit {
+    background-color: green;
+}

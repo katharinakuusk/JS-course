@@ -7,6 +7,7 @@ var direction = 'y+'; // Направление движения змейки
 var gameIsRunning = false; // Запущена ли игра
 var snake_timer; // Таймер змейки
 var food_timer; // Таймер для еды
+var let_timer; // Таймер для препятствий 
 var score = 0; // Результат
 
 function init() {
@@ -67,6 +68,7 @@ function startGame() {
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
     setTimeout(createFood, 5000);
+    setTimeout(сreateLet, 20000);
 }
 
 /**
@@ -199,6 +201,27 @@ function createFood() {
 
             food_cell.setAttribute('class', classes + 'food-unit');
             foodCreated = true;
+        }
+    }
+}
+
+function сreateLet () {
+    var letCreated = false;
+    
+    while (!letCreated) {
+        var let_x = Math.floor(Math.random() * FIELD_SIZE_X);
+        var let_y = Math.floor(Math.random() * FIELD_SIZE_Y);
+        
+        var let_cell = document.getElementsByClassName('cell-' + let_y + '-' + let_x)[0];
+        var let_cell_classes = let_cell.getAttribute('class').split(' ');
+        
+        if (!let_cell_classes.includes('snake-unit')) {
+            var classes = '';
+            for (var i = 0; i < let_cell_classes.length; i++) {
+                classes += let_cell_classes[i] + ' ';
+            }
+        let_cell.setAttribute('class', classes + 'let-unit');
+        letCreated = true;
         }
     }
 }
