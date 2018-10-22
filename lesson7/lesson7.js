@@ -226,16 +226,6 @@ function сreateLet () {
     }
 }
 
-function haveLet(unit) {
-
-    var unit_classes = unit.getAttribute('class').split(' ');
-
-    // Если препятствие
-    if (unit_classes.includes('let-unit')) {
-        finishTheGame()    
-    }
-}
-
 /**
  * Изменение направления движения змейки
  * @param e - событие
